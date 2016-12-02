@@ -21,6 +21,10 @@ describe( "Record Store", function() {
       parklife = new Record( "Parklife", "Blur", 10.00 );
     });
 
+    it( "Should have name passed in constructor", function() {
+      assert.equal( "Empty Records", emptyRecordShop.name );
+    });
+
     it( "Should start with no records", function() {
       assert.equal( 0, emptyRecordShop.records.length );
     });
