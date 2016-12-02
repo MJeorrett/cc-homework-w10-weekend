@@ -40,6 +40,11 @@ describe( "Record Store", function() {
       assert.equal( 0, emptyRecordShop.cashInHand );
     });
 
+    it( "Should increase cashInHand by amount passed to addCash()", function() {
+      emptyRecordShop.addCash( 13 );
+      assert.equal( 13, emptyRecordShop.cashInHand );
+    });
+
     it( "Should start with no records", function() {
       assert.equal( 0, emptyRecordShop.records.length );
     });
