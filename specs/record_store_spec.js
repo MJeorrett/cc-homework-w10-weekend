@@ -13,7 +13,7 @@ describe( "Record Store", function() {
 
     beforeEach( function() {
 
-      emptyRecordShop = new RecordShop( "Empty Records", "Inverness" );
+      emptyRecordShop = new RecordShop( "Empty Records", "Inverness", 12345 );
 
       abbeyRoad = new Record( "Abbey Road", "The Beatles", 15.99 );
       batOutOfHell = new Record( "Bat Out of Hell", "Meatloaf", 12.99 );
@@ -31,7 +31,7 @@ describe( "Record Store", function() {
     });
 
     it( "Should have cashInHand passed in constructor", function() {
-      assert.equal( 12345, )
+      assert.equal( 12345, emptyRecordShop.cashInHand );
     });
 
     it( "Should start with no records", function() {

@@ -1,7 +1,8 @@
-var RecordShop = function( name, city ) {
+var RecordShop = function( name, city, initialCashInHand ) {
 
   this.name = name;
   this.city = city;
+  this.cashInHand = initialCashInHand;
   this.records = [];
 };
 
