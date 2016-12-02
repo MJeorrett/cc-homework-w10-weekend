@@ -2,7 +2,16 @@ var RecordShop = function( name, city, initialCashInHand ) {
 
   this.name = name;
   this.city = city;
-  this.cashInHand = initialCashInHand;
+
+  if (initialCashInHand != undefined ) {
+
+    this.cashInHand = initialCashInHand;
+
+  } else {
+
+    this.cashInHand = 0;
+  }
+  
   this.records = [];
 };
 
