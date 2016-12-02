@@ -11,7 +11,7 @@ var RecordShop = function( name, city, initialCashInHand ) {
 
     this.cashInHand = 0;
   }
-  
+
   this.records = [];
 };
 
@@ -23,6 +23,9 @@ RecordShop.prototype = {
 
   addStock: function( record ) {
     this.records.push( record );
+  },
+  addCash: function( amount ) {
+    this.cashInHand += amount;
   }
 };
 
