@@ -1,5 +1,6 @@
-var RecordShop = function() {
+var RecordShop = function( name ) {
 
+  this.name = name;
   this.records = [];
 };
 
