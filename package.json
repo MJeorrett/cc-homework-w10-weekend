@@ -1,0 +1,14 @@
+{
+  "name": "cc-homework-w10-weekend",
+  "version": "1.0.0",
+  "description": "Javascript record shop modeling exercise",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha specs"
+  },
+  "author": "MJeorrett",
+  "license": "ISC",
+  "devDependencies": {
+    "mocha": "^3.2.0"
+  }
+}
