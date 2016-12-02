@@ -28,4 +28,9 @@ describe( "Record Store", function() {
     it( "Should start with stockLevel() = 0", function() {
       assert.equal( 0, emptyRecordShop.stockLevel() );
     });
+
+    it( "Should increase stockLevel() when record is added to stockLevel", function() {
+      emptyRecordShop.addStock( abbeyRoad );
+      assert.equal( 1, emptyRecordShop.stockLevel() );
+    });
 });
