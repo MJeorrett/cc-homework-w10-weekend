@@ -20,4 +20,8 @@ describe( "Record", function() {
   it( "Should have price passed in constructor", function() {
     assert.equal( "15.99", abbeyRoad.price );
   });
+
+  it( "Should have description() returning 'album_name by artist: £price'", function() {
+    assert.equal( "Abbey Road by The Beatles: £15.99", abbeyRoad.description() );
+  });
 });
