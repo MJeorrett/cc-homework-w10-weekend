@@ -6,7 +6,7 @@ describe( "Record", function() {
   var abbeyRoad = null;
 
   beforeEach( function() {
-    abbeyRoad = new Record( "Abbey Road", "The Beatles" );
+    abbeyRoad = new Record( "Abbey Road", "The Beatles", 15.99 );
   });
 
   it( "Should have name passed in constructor", function() {
