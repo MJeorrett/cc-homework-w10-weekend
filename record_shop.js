@@ -17,6 +17,7 @@ RecordShop.prototype = {
   addStock: function( record ) {
     this.records.push( record );
   },
+
   addCash: function( amount ) {
     this.cashInHand += amount;
   }
