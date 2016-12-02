@@ -13,7 +13,8 @@ describe( "Record Store", function() {
 
     beforeEach( function() {
 
-      emptyRecordShop = new RecordShop( "Empty Records" );
+      emptyRecordShop = new RecordShop( "Empty Records", "Inverness" );
+      
       abbeyRoad = new Record( "Abbey Road", "The Beatles", 15.99 );
       batOutOfHell = new Record( "Bat Out of Hell", "Meatloaf", 12.99 );
       tooDarkPark = new Record( "Too Dark Park", "Skinny Puppy", 13.50 );
