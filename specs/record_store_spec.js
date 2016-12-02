@@ -1,4 +1,6 @@
 var assert = require('assert');
+var RecordShop = require('../record_shop');
+var Record = require('../record');
 
 describe( "Record Store", function() {
 
