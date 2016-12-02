@@ -24,4 +24,8 @@ describe( "Record Store", function() {
     it( "Should start with no records", function() {
       assert.equal( 0, emptyRecordShop.records.length );
     });
+
+    it( "Should start with stockLevel() = 0", function() {
+      assert.equal( 0, emptyRecordShop.stockLevel() );
+    });
 });
