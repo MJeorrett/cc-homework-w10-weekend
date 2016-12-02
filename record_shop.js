@@ -6,9 +6,11 @@ var RecordShop = function( name, city ) {
 };
 
 RecordShop.prototype = {
+
   stockLevel: function() {
     return this.records.length;
   },
+
   addStock: function( record ) {
     this.records.push( record );
   }
