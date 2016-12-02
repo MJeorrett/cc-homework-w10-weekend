@@ -25,6 +25,10 @@ describe( "Record Store", function() {
       assert.equal( "Empty Records", emptyRecordShop.name );
     });
 
+    it( "Should have city passed in constructor", function() {
+      assert.equal( "Inverness", emptyRecordShop.city );
+    });
+
     it( "Should start with no records", function() {
       assert.equal( 0, emptyRecordShop.records.length );
     });
