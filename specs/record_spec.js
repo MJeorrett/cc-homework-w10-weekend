@@ -16,4 +16,8 @@ describe( "Record", function() {
   it( "Should have artist passed in constructor", function() {
     assert.equal( "The Beatles", abbeyRoad.artist );
   });
+
+  it( "Should have price passed in constructor", function() {
+    assert.equal( "15.99", abbeyRoad.price );
+  });
 });
