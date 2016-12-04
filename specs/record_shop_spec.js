@@ -22,6 +22,10 @@ describe( "Record Store", function() {
       tooDarkPark = new Record( "Too Dark Park", "Skinny Puppy", 13.50 );
       slipperyWhenWet = new Record( "Slippery When Wet", "Bon Jovi", 12.99 );
       parklife = new Record( "Parklife", "Blur", 10.00 );
+
+      populatedRecordShop.addStock( abbeyRoad );
+      populatedRecordShop.addStock( batOutOfHell );
+      populatedRecordShop.addStock( tooDarkPark );
     });
 
     it( "Should have name passed in constructor", function() {
@@ -72,5 +76,13 @@ describe( "Record Store", function() {
       actual = emptyRecordShop.inventoryString();
 
       assert.equal( expected, actual );
+    });
+
+    it( "Should return true from hasRecord() when record is in stock", function() {
+      assert.equal( true, populatedRecordShop.hasRecord( abbeyRoad ) );
+    });
+
+    it( "Should return false from hasRecord() when record is not in stock", function() {
+      assert.equal( false, populatedRecordShop.hasRecord( slipperyWhenWet ) );
     });
 });
