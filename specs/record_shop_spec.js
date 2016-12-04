@@ -57,4 +57,20 @@ describe( "Record Store", function() {
       emptyRecordShop.addStock( abbeyRoad );
       assert.equal( 1, emptyRecordShop.stockLevel() );
     });
+
+    it( "Should return correct inventory listing from inventoryString", function() {
+
+      emptyRecordShop.addStock( abbeyRoad );
+      emptyRecordShop.addStock( batOutOfHell );
+      emptyRecordShop.addStock( tooDarkPark );
+
+      var expected = "Inventory for Empty Records, Inverness:";
+      expected += "\nAbbey Road by The Beatles: £15.99";
+      expected += "\nBat Out of Hell by Meatloaf: £12.99";
+      expected += "\nToo Dark Park by Skinny Puppy: £13.50";
+
+      actual = emptyRecordShop.inventoryString();
+
+      assert.equal( expected, actual );
+    });
 });

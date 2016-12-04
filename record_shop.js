@@ -4,7 +4,6 @@ var RecordShop = function( name, city, initialCashInHand ) {
   this.city = city;
 
   this.cashInHand = initialCashInHand === undefined ? 0 : initialCashInHand;
-
   this.records = [];
 };
 
@@ -20,6 +19,17 @@ RecordShop.prototype = {
 
   addCash: function( amount ) {
     this.cashInHand += amount;
+  },
+
+  inventoryString: function() {
+    var result = "Inventory for " + this.name + ", " + this.city + ":"
+
+    for ( var aRecord of this.records ) {
+
+      result += "\n" + aRecord.description();
+    }
+
+    return result;
   }
 };
 
