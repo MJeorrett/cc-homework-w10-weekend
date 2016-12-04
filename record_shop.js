@@ -32,9 +32,21 @@ RecordShop.prototype = {
     return result;
   },
 
+  indexOfRecord: function( record ) {
+    return this.records.indexOf( record );
+  },
+
   hasRecord: function( record ) {
-    var index = this.records.indexOf( record );
-    return index != -1;
+    return this.indexOfRecord( record ) != -1;
+  },
+
+  sell: function( record ) {
+    var recordIndex = this.indexOfRecord( record );
+    if ( recordIndex != -1 ) {
+
+      this.records.splice( recordIndex, 1 );
+      this.cashInHand += record.price;
+    }
   }
 };
 
