@@ -101,4 +101,20 @@ describe( "Record Store", function() {
       assert.equal( 3, populatedRecordShop.stockLevel() );
       assert.equal( 12345, populatedRecordShop.cashInHand );
     });
+
+    it( "Should report costOfStock", function() {
+      var costOfStock = 15.99 + 12.99 + 13.50;
+      assert.equal( costOfStock, populatedRecordShop.costOfStock() );
+    });
+
+    it( "Should report financial situation correctly", function() {
+      var costOfStock = 15.99 + 12.99 + 13.50;
+      var grossProfit = 12345 - costOfStock;
+      var expected = "Finacial report for HMV, Berlin:";
+      expected += "cash in hand: £12345";
+      expected += "held stock: £" + costOfStock;
+      expected += "gross profit: £" + grossProfit;
+
+      assert.equal( expected, populatedRecordShop.financialReport() );
+    });
 });
