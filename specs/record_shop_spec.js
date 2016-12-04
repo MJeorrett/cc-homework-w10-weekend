@@ -85,4 +85,20 @@ describe( "Record Store", function() {
     it( "Should return false from hasRecord() when record is not in stock", function() {
       assert.equal( false, populatedRecordShop.hasRecord( slipperyWhenWet ) );
     });
+
+    it( "Should increase cashInHand by price of record when selling it", function() {
+      populatedRecordShop.sell( abbeyRoad );
+      assert.equal( 12345 + 12.99, populatedRecordShop.cashInHand );
+    });
+
+    it( "Should remove record from stock when selling it", function() {
+      populatedRecordShop.sell( abbeyRoad );
+      assert.equal( false, populatedRecordShop.hasRecord( abbeyRoad ) );
+    });
+
+    it( "Should not do anything when trying to sell record that is not in stock", function() {
+      populatedRecordShop.sell( slipperyWhenWet );
+      assert.equal( 3, populatedRecordShop.stockLevel() );
+      assert.equal( 12345, populatedRecordShop.cashInHand );
+    });
 });
