@@ -47,6 +47,21 @@ RecordShop.prototype = {
       this.records.splice( recordIndex, 1 );
       this.cashInHand += record.price;
     }
+  },
+
+  costOfStock: function() {
+    return this.records.reduce( function( total, record ) {
+      return total + record.price;
+    }, 0 );
+  },
+
+  financialReport: function() {
+    var result = "Financial report for " + this.name + ", " + this.city + ":";
+    result += "\ncash in hand: £" + this.cashInHand.toFixed( 2 );
+    result += "\nheld stock: £" + this.costOfStock().toFixed( 2 );
+    result += "\ngross profit: £" + (this.cashInHand - this.costOfStock()).toFixed( 2 );
+
+    return result;
   }
 };
 
