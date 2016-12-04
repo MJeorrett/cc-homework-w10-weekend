@@ -22,6 +22,8 @@ describe( "Record", function() {
   });
 
   it( "Should have description() returning 'album_name by artist: £price'", function() {
-    assert.equal( "Abbey Road by The Beatles: £15.99", abbeyRoad.description() );
+    var expected = "Abbey Road by The Beatles: £15.99";
+    var actual = abbeyRoad.description();
+    assert.equal( expected, actual );
   });
 });
