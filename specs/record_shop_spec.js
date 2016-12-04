@@ -88,7 +88,7 @@ describe( "Record Store", function() {
 
     it( "Should increase cashInHand by price of record when selling it", function() {
       populatedRecordShop.sell( abbeyRoad );
-      assert.equal( 12345 + 12.99, populatedRecordShop.cashInHand );
+      assert.equal( 12345 + 15.99, populatedRecordShop.cashInHand );
     });
 
     it( "Should remove record from stock when selling it", function() {
