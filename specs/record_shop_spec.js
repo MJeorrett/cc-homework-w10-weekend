@@ -110,10 +110,10 @@ describe( "Record Store", function() {
     it( "Should report financial situation correctly", function() {
       var costOfStock = 15.99 + 12.99 + 13.50;
       var grossProfit = 12345 - costOfStock;
-      var expected = "Finacial report for HMV, Berlin:";
-      expected += "cash in hand: £12345";
-      expected += "held stock: £" + costOfStock;
-      expected += "gross profit: £" + grossProfit;
+      var expected = "Financial report for HMV, Berlin:";
+      expected += "\ncash in hand: £12345.00";
+      expected += "\nheld stock: £" + costOfStock.toFixed( 2 );
+      expected += "\ngross profit: £" + grossProfit.toFixed( 2 );
 
       assert.equal( expected, populatedRecordShop.financialReport() );
     });
