@@ -30,6 +30,11 @@ RecordShop.prototype = {
     }
 
     return result;
+  },
+
+  hasRecord: function( record ) {
+    var index = this.records.indexOf( record );
+    return index != -1;
   }
 };
 
